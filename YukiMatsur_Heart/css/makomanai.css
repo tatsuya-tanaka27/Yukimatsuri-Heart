@@ -1,0 +1,109 @@
+@charset "UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+body{
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    font-size: 16px;
+}
+.gnav {
+    margin-bottom: 50px;
+}
+.gnav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+.gnav ul li {
+    list-style: none;
+    transition: 0.4s;
+    opacity: 1;    
+    border-radius: 10px;  
+    margin: 0 5px 15px;  
+}
+.gnav ul li:hover {
+    opacity: 0.7;
+}
+.gnav ul li a {
+    display: block;
+    width: 150px;
+    height: 30px;
+}
+.gnav ul li:nth-child(1) {
+    background: url(../img/Nav-top.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gnav ul li:nth-child(2) {
+    background: url(../img/Nav-odori.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gnav ul li:nth-child(3) {
+    background: url(../img/Nav-nakajima.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gnav ul li:nth-child(4) {
+    background: url(../img/Nav-susukino.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gnav ul li:nth-child(5) {
+    background: url(../img/Nav-makomanai.jpg) no-repeat center center;
+    background-size: cover;
+}
+.index{
+    width: 700px;
+    font-size: 36px;
+    border-top: double 4px #2097b6;
+    border-bottom: double 4px #2097b6;
+    margin-bottom: 10px;
+}
+.sidebar{
+    width: 200px;
+    margin: 0 50px;
+    top: 20px;
+    position: sticky;
+    height: 100%;
+}
+.m-container{
+    display: flex;
+    justify-content: space-between
+    align-items;
+}
+.mh-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p{
+    text-indent: 16px;
+    line-height: 1.7;
+}
+.mo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img.float_left{
+    float: left;
+    margin: 0 20px 0 20px;
+}
+.ms-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mt-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+p.side{
+    font-size: 12px;
+    margin: 0;
+}

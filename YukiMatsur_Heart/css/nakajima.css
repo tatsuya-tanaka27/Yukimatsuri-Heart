@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 62.5%  "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+body {
+    font-size: 1.6rem;
+    color: rgb(34, 34, 34);
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 295px;
+}
+
+header h1 {
+    width: 100%;
+    height: 100%;
+}
+
+header h1 a {
+    display: block;
+    height: 100%;
+    transition: 0.4s;
+    opacity: 1;
+    background: url(../img/header.png) no-repeat center center;
+}
+
+h2 {
+    background: url(../img/h2bg.png) no-repeat bottom right;
+    text-align: center; 
+    color: rgb(0,111,191);
+    height: 40px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    padding-left: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    text-shadow: 2px 2px 2px rgb(255,255,255);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s;
+    opacity: 1;
+}
+
+a:hover,
+header h1 a:hover {
+    opacity: 0.8;
+}
+
+.gnav {
+    margin-bottom: 50px;
+    
+}
+
+.gnav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gnav ul li {
+    list-style: none;
+    transition: 0.4s;
+    opacity: 1;    
+    border-radius: 10px;  
+    margin: 0 5px 15px;  
+}
+
+.gnav ul li:hover {
+    opacity: 0.7;
+}
+
+.gnav ul li a {
+    display: block;
+    width: 150px;
+    height: 30px;
+
+}
+
+.gnav ul li:nth-child(1) {
+    background: url(../img/Navi_Top.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(2) {
+    background: url(../img/Navi_Odori.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(3) {
+    background: url(../img/Navi_Susukino.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(4) {
+    background: url(../img/Navi_Nakajima.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(5) {
+    background: url(../img/Navi_Makomanai.png) no-repeat center center;
+}
+
+
+
+main {
+    display: block;
+    margin: 0 auto 100px;
+}
+
+footer {
+    background:url(../img/footer.png);
+    height: 110px;
+}
+
+
+
+.main__contener__intro dt {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.main__contener__intro dt:after {
+    content: "";
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: 1px solid rgb(255,255,255);
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    box-shadow: 1px 1px 4px rgb(68, 68, 68);
+}
+.main__contener__intro dt img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.main__contener__intro {
+    width: 95%;
+    margin: 0 auto 100px;
+    padding-top: 20px;
+    
+}
+.main__contener__intro dd {
+    padding-top: 30px;
+
+    margin: 0 auto;
+}
+.main__contents {
+    padding: 20px 15px 80px;
+    margin-bottom: 100px;
+    background: url(../img/nakajima_row1.png) no-repeat bottom right;
+    position: relative;
+}
+.main__contents:before {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    content: "";
+    background: url(../img/nakajima_row1.png) no-repeat top left;
+    z-index: -1;
+}
+.nakajima__row {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+.nakajima__colum01 {
+    width: 360px;
+}
+.nakajima__colum01 dt {  
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 180px;
+    border: 10px solid rgb(255,255,255);
+    box-shadow: 1px 1px 8px rgb(131, 131, 131);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main__contents01 dl dt  img {
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: relative;
+}
+
+.nakajima__colum01 dd {
+    padding: 15px 15px 50px;
+    width: 80%;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+.nakajima__colum02 {
+    width:  calc(100% - 400px);
+    margin: 20px;
+    box-sizing: border-box;
+
+}
+.nakajima__colum02 p {
+    margin-bottom: 20px;
+}
+.main__contents:nth-of-type(2) .nakajima__row {
+    justify-content: center;
+
+}
+.main__contents:nth-of-type(2) .nakajima__colum01 {
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 10px 20px 80px;
+}
+
+.main__contents:nth-of-type(2) .nakajima__colum01 dt {
+    width: 250px;
+    height: 250px;
+}
+.main__contents:nth-of-type(2) .nakajima__colum01 dd {
+    text-align: center;
+}
+.nakajima__colum01 h4 {
+    margin-bottom: 5px;
+    color: rgb(5, 62, 102);
+}
+
+
+
+@media screen and (max-width: 960px) {
+
+
+.nakajima__colum02 {
+    min-width: 80%;
+}
+
+
+
+
+}

@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 62.5%  "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+body {
+    font-size: 1.2rem;
+    color: rgb(34, 34, 34);
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 295px;
+}
+
+header h1 {
+    width: 100%;
+    height: 100%;
+}
+
+header h1 a {
+    display: block;
+    height: 100%;
+    transition: 0.4s;
+    opacity: 1;
+    background: url(../img/header_img.png) no-repeat center center;
+}
+
+h2 {
+    background: url(../img/h2bg.png) no-repeat bottom right;
+    text-align: center; 
+    color: rgb(65,119,168);
+    height: 50px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    padding-left: 10px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s;
+    opacity: 1;
+}
+
+a:hover,
+header h1 a:hover {
+    opacity: 0.8;
+}
+
+.gnav {
+    margin-bottom: 50px;
+    
+}
+
+.gnav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.gnav ul li {
+    list-style: none;
+    transition: 0.4s;
+    opacity: 1;    
+    border-radius: 10px;
+}
+
+.gnav ul li:hover {
+    opacity: 0.7;
+}
+
+.gnav ul li a {
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.gnav ul li:nth-child(1) {
+    background: url(../img/nav01.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(2) {
+    background: url(../img/nav02.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(3) {
+    background: url(../img/nav03.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(4) {
+    background: url(../img/nav04.png) no-repeat center center;
+}
+
+.gnav ul li:nth-child(5) {
+    background: url(../img/nav05.png) no-repeat center center;
+}
+
+
+
+.gnav-i ul li {
+    list-style: none;
+    text-align: center;
+}
+.gnav-i ul li a {
+    color: rgb(95,95,95);
+}
+.gnav-i__list {
+    text-align: center;
+}
+.gnav-i__list .menu-item:not(:first-child) {
+    margin-top: 10px;
+}
+
+.header-i__inner {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(170,205,243,0.9); 
+    z-index: 10;
+    transition: 0.5s;   
+}
+.gnavi-btn {
+    cursor: pointer;
+
+}
+.gnavi-btn label {
+    width: 44px;
+    height: 25px;
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 100;
+    padding-top: 10px;
+    background: rgb(255,255,255);
+    border-radius: 5px;
+
+}
+
+
+.gnavi-btn-line01,
+.gnavi-btn-line02,
+.gnavi-btn-line03 {
+    background-color: #333333;
+    height: 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6px;
+    content: ''; 
+    transition: 0.2s;
+    position: relative;
+    height: 1px;
+    width: 30px;
+}
+
+.gnavi-btn-line01 {
+    transform-origin: 100% 100%;
+ 
+}
+.gnavi-btn-line02 {
+    width: 24px;
+    
+}
+.gnavi-btn-line03 {
+    width: 18px;
+    transform-origin: 100% 0;
+
+}
+#gnavi-btn:checked ~ .gnavi-btn .gnavi-btn-line01 {
+    transform:  translate(-4px, -2px) rotate(-42deg);
+}
+#gnavi-btn:checked ~ .gnavi-btn .gnavi-btn-line02 {
+	opacity: 0;
+}
+#gnavi-btn:checked ~ .gnavi-btn .gnavi-btn-line03 {
+    transform: translate(-3px, 4px) rotate(41deg);
+    width: 30px;
+}
+#gnavi-btn:checked ~ .header-i__inner {
+    top: 0;
+}
+#gnavi-btn:checked ~ .gnavi-btn label {
+    background: rgba(255,255,255,0);
+}
+.gnav-i {
+    z-index: 11;
+    position: relative;
+    top: 150px;
+    width: 90%;
+    margin: 0 auto;
+}
+.gnav-i ul li {
+    border-bottom: 1px solid rgba(95, 95, 95);
+}
+.gnav-i ul li a {
+    font-size: 3em;
+}
+.header-i__inner, #gnavi-btn, .gnavi-btn, .gnav-i {
+    display: none; 
+}
+
+
+
+main {
+    display: block;
+    margin: 0 auto 100px;
+    width: 95%;
+}
+
+footer {
+    background: rgb(206,245,254);
+    height: 100px;
+}
+
+footer p small {
+    padding-top: 45px;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 960px) {
+
+nav {
+    display: none;
+}
+
+.header-i__inner, .gnavi-btn, .gnav-i {
+    display: block;
+    }
+}
