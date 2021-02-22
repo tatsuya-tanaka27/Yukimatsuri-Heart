@@ -1,0 +1,465 @@
+/* 全画面共通スタイル */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font: 62.5% "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
+		"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E",
+		"ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+body {
+	font-size: 1.6rem;
+	color: rgb(34, 34, 34);
+}
+
+#wrapper {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+header {
+	width: 100%;
+}
+
+header h1 a {
+	display: block;
+	height: 100%;
+	transition: 0.4s;
+	opacity: 1;
+}
+
+header h1 a img {
+	width: 100%;
+}
+
+h2 {
+	background: url(../img/h2bg.png) no-repeat bottom right;
+	text-align: center;
+	color: rgb(0, 111, 191);
+	height: 40px;
+	box-sizing: border-box;
+	padding-top: 5px;
+	margin-bottom: 40px;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.6em;
+	padding-left: 10px;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.4s;
+	opacity: 1;
+}
+
+a:hover,
+header h1 a:hover {
+	opacity: 0.8;
+}
+
+.gnav {
+	margin-bottom: 50px;
+}
+
+.gnav ul {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.gnav ul li {
+	list-style: none;
+	transition: 0.4s;
+	opacity: 1;
+	border-radius: 10px;
+	margin: 0 5px 15px;
+}
+
+.gnav ul li:hover {
+	opacity: 0.7;
+}
+
+.gnav ul li a {
+	display: block;
+	width: 150px;
+	height: 30px;
+}
+
+.gnav ul li:nth-child(1) {
+	background: url(../img/Nav-top.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.gnav ul li:nth-child(2) {
+	background: url(../img/Nav-odori.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.gnav ul li:nth-child(3) {
+	background: url(../img/Nav-nakajima.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.gnav ul li:nth-child(4) {
+	background: url(../img/Nav-susukino.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.gnav ul li:nth-child(5) {
+	background: url(../img/Nav-makomanai.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+main {
+	display: block;
+	margin: 0 auto 100px;
+}
+
+footer img {
+	width: 100%;
+}
+
+.main__contents {
+	background: url(../img/nakajima_row1.png) no-repeat bottom right;
+	background-color: rgba(255, 255, 255, 0.6);
+	background-blend-mode: lighten;
+	position: relative;
+}
+
+/* TOP画面用スタイル */
+
+.cb {
+	clear: both;
+}
+
+#top-border {
+	border: 3px solid royalblue;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#top-label {
+	font-size: 3.6rem !important;
+	color: rgb(0, 111, 191);
+}
+
+#top-area {
+	width: 100%;
+}
+
+#top-image {
+	width: 100%;
+	height: 100%;
+}
+
+#top-image-collabo-area {
+	width: 300px;
+	margin: 0px 20px 20px 27px;
+}
+
+#top-description-area {
+	width: 300px;
+}
+
+#top-description {
+	padding: 0px 10px 15px 10px;
+}
+
+#top-image-ff-area {
+	width: 300px;
+	margin: 0px 20px 20px 20px;
+}
+
+#guide-border {
+	width: 985px;
+	margin-top: 30px;
+	border: 3px solid royalblue;
+}
+
+#guide-border-half {
+	width: 350px;
+	margin-top: 30px;
+	border: 3px solid royalblue;
+}
+
+#guide-label {
+	font-size: 3.6rem !important;
+	color: rgb(0, 111, 191);
+}
+
+#guide-table {
+	margin: 30px auto 30px auto;
+	width: 95%;
+	border: solid 1px black;
+}
+
+#guide-table th {
+	border: solid 1px black;
+	height: 10px;
+	background-color: #deffff;
+}
+
+#guide-table td {
+	border: solid 1px black;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.guide-image {
+	width: 150px;
+	height: 150px;
+	margin: 0px 0px 0px 0px;
+}
+
+.guide-image:hover {
+	opacity: 0.8;
+}
+
+.guide-description {
+	text-align: left !important;
+}
+
+.guide-msg {
+	color: red;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#yukimiku-area {
+	width: 70%;
+	margin: 20px auto 20px auto;
+}
+
+#top_yukimiku {
+	float: left;
+}
+
+#top_yukimiku:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+#yukimiku-border {
+	width: 50%;
+	height: 40%;
+	margin-top: 30px;
+	border: 3px solid rgb(0, 191, 191);
+}
+
+#yukimiku-label {
+	margin-left: 75px;
+	font-size: 1.6rem !important;
+	color: rgb(0, 191, 191);
+}
+
+#yukimiku-description {
+	text-align: left;
+	vertical-align: middle;
+	padding: 5px 10px 5px 10px;
+}
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(99, 99, 99, 0.3);
+	display: none;
+	z-index: 998;
+}
+#overlayWindow {
+	width: 60%;
+	height: 75%;
+	margin: 100px auto;
+	border: 2px solid greenyellow;
+	background-color: whitesmoke;
+	text-align: center;
+	display: none;
+	z-index: 999;
+}
+
+#yukimiku-table {
+	margin: 20px auto 10px auto;
+	width: 70%;
+	border: solid 1px black;
+}
+
+#yukimiku-table th {
+	border: solid 1px black;
+	height: 10px;
+	background-color: #deffff;
+}
+
+#yukimiku-table td {
+	border: solid 1px black;
+	width: 30%;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.yukimiku-image {
+	width: 100px;
+	height: 100px;
+	margin: 0px 0px 0px 0px;
+}
+
+/* 画面サイズ調整用スタイル */
+
+@media screen and (max-width: 800px) {
+	#wrapper {
+		width: 100%;
+	}
+
+	#guide-area {
+		display: none;
+	}
+
+	#top-label {
+		margin-left: 50px;
+	}
+
+	#guide-label {
+		margin-left: 50px;
+	}
+
+	#yukimiku-label {
+		margin-left: 10px;
+	}
+}
+
+@media screen and (min-width: 801px) {
+	#wrapper {
+		width: 100%;
+	}
+
+	#guide-area-half {
+		display: none;
+	}
+
+	#top-label {
+		margin-left: 350px;
+	}
+
+	#guide-label {
+		margin-left: 350px;
+	}
+
+	#yukimiku-label {
+		margin-left: 95px;
+	}
+}
+
+/* ハンバーガーメニュー用スタイル */
+
+nav {
+	width: 200px;
+	padding-top: 200px;
+}
+.menuButton {
+	display: block;
+	height: 80px;
+	width: 80px;
+	background: rgb(228, 228, 228);
+	opacity: 0.9;
+	border-radius: 1em;
+	position: fixed;
+	/* 固定コマンド */
+	top: 0;
+	right: 0;
+	transition: 0.3s;
+	z-index: 51;
+}
+.menuButton div {
+	height: 1px;
+	width: 60%;
+	background: rgb(71, 71, 71);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: ease-out 0.3s;
+}
+.menuButton.active {
+	background-color: #fff;
+}
+.menuButton div:nth-of-type(1) {
+	transform: translate(-50%, -15px);
+}
+.menuButton div:nth-of-type(3) {
+	transform: translate(-50%, 15px);
+}
+.menuButton.active div:nth-of-type(1) {
+	transform: rotate(45deg) translate(-50%, -0px);
+	transform-origin: 0% 50%;
+}
+.menuButton.active div:nth-of-type(3) {
+	transform: rotate(-45deg) translate(-50%, 0px);
+	transform-origin: 0% 50%;
+}
+.menuButton.active div:nth-of-type(2) {
+	width: 70%;
+	height: 70%;
+	border: 1px solid #333;
+	background-color: transparent;
+	border-radius: 15%;
+}
+nav {
+	opacity: 0;
+	visibility: hidden;
+	transform: translate(100%);
+	transition: 0.3s;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: rgb(255, 255, 255);
+	max-height: 100vh;
+	height: 100vh;
+	z-index: 50;
+	overflow: auto;
+	box-shadow: 0 0 10px 3px rgb(87, 87, 87);
+}
+nav ul {
+	text-align: center;
+	list-style: none;
+}
+nav ul li:not(:first-of-type) {
+	margin-top: 20px;
+}
+nav.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0%);
+}
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(221, 221, 221);
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+	transition: 0.3s;
+}
+.mask.active {
+	opacity: 0.7;
+	visibility: visible;
+}
+nav img {
+	background-size: cover;
+	width: 150px;
+}

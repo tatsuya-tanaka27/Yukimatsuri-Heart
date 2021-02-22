@@ -1,0 +1,353 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.his1 {
+    color: #364e96;
+    padding: 0.5em 0;
+    border-top: solid 3px #364e96;
+    border-bottom: solid 3px #364e96;
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+    margin: 100px auto auto auto;
+}
+
+.remark {
+    padding: 20px 15px 80px;
+    background: url(../img/nakajima_row1.png) no-repeat bottom right;
+    position: relative;
+}
+
+.remark:before {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    content: "";
+    background: url(../img/nakajima_row1.png) no-repeat top left;
+    z-index: -1;
+}
+
+.history {
+    padding: 20px 15px 80px;
+    background: url(../img/nakajima_row1.png) no-repeat bottom right;
+    position: relative;
+}
+
+.history:before {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    content: "";
+    background: url(../img/nakajima_row1.png) no-repeat top left;
+    z-index: -1;
+}
+
+h4 {
+    width: 90%;
+    text-align: center;
+    color: #364e96;
+    border: solid 3px #364e96;
+    padding: 0;
+    border-radius: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-top: 0;
+    width: 80%;
+    margin: 0 auto auto auto;
+}
+
+body p {
+    font-size: 16px;
+}
+
+.history {
+    text-align: center;
+}
+
+html {
+    font: 62.5% "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+body {
+    font-size: 1.2rem;
+    color: rgb(34, 34, 34);
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 295px;
+}
+
+header h1 {
+    width: 100%;
+    height: 100%;
+}
+
+header h1 a {
+    display: block;
+    height: 100%;
+    transition: 0.4s;
+    opacity: 1;
+    background: url(../img/header_0.png) no-repeat center center;
+}
+
+.remark img {
+    width: 80%;
+}
+
+.remark {
+    position: relative;
+    text-align: center;
+}
+
+.remark p {
+    width: 80%;
+    margin: 5px auto auto auto;
+    text-align: left;
+}
+
+h2 {
+    background: url(../img/h2bg.png) no-repeat bottom right;
+    text-align: center;
+    color: rgb(0, 111, 191);
+    height: 40px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s;
+    opacity: 1;
+}
+
+a:hover,
+header h1 a:hover {
+    opacity: 0.8;
+}
+
+.gnav {
+    margin-bottom: 50px;
+}
+
+.gnav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.gnav ul li {
+    list-style: none;
+    transition: 0.4s;
+    opacity: 1;
+    border-radius: 10px;
+    margin: 0 5px 15px;
+}
+
+.gnav ul li:hover {
+    opacity: 0.7;
+}
+
+.gnav ul li a {
+    display: block;
+    width: 150px;
+    height: 30px;
+}
+
+.gnav ul li:nth-child(1) {
+    background: url(../img/Nav-top.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.gnav ul li:nth-child(2) {
+    background: url(../img/Nav-odori.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.gnav ul li:nth-child(3) {
+    background: url(../img/Nav-nakajima.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.gnav ul li:nth-child(4) {
+    background: url(../img/Nav-makomanai.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.gnav ul li:nth-child(5) {
+    background: url(../img/Nav-susukino.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+main {
+    display: block;
+    margin: 0 auto 100px;
+}
+
+footer {
+    background: url(../img/footer.png);
+    height: 110px;
+}
+
+@media screen and (max-width: 960px) {
+    #wrapper {
+        width: 100%;
+    }
+}
+
+.slide {
+    position: relative;
+    height: 400px;
+}
+
+.slide img {
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+/* ------------------ハンバーガーメニュー----------------------- */
+
+nav {
+    width: 200px;
+    padding-top: 200px;
+}
+
+.menuButton {
+    display: block;
+    height: 80px;
+    width: 80px;
+    background: rgb(228, 228, 228);
+    opacity: 0.9;
+    border-radius: 1em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: .3s;
+    z-index: 51;
+}
+
+.menuButton div {
+    height: 1px;
+    width: 60%;
+    background: rgb(71, 71, 71);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: ease-out 0.3s;
+}
+
+.menuButton.active {
+    background-color: #fff;
+}
+
+.menuButton div:nth-of-type(1) {
+    transform: translate(-50%, -15px);
+}
+
+.menuButton div:nth-of-type(3) {
+    transform: translate(-50%, 15px);
+}
+
+.menuButton.active div:nth-of-type(1) {
+    transform: rotate(45deg) translate(-50%, -0px);
+    transform-origin: 0% 50%;
+}
+
+.menuButton.active div:nth-of-type(3) {
+    transform: rotate(-45deg) translate(-50%, 0px);
+    transform-origin: 0% 50%;
+}
+
+.menuButton.active div:nth-of-type(2) {
+    width: 80%;
+    height: 80%;
+    border: 1px solid #333;
+    background-color: transparent;
+    border-radius: 15%;
+}
+
+nav {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(100%);
+    transition: 0.3s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    max-height: 100vh;
+    height: 100vh;
+    z-index: 50;
+    overflow: auto;
+    box-shadow: 0 0 10px 3px rgb(87, 87, 87);
+}
+
+nav ul {
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0%);
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.mask.active {
+    opacity: 0.7;
+    visibility: visible;
+}
+
+nav img {
+    background-size: cover;
+    width: 150px;
+}
+
+
+/* --------------------------------------------- */
