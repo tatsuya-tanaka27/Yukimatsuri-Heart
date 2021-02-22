@@ -2,38 +2,63 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
+		<title>さっぽろ　雪まつり　TOP</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Top| Heart Snow Festival</title>
-		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/top.css" />
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/overlay.js"></script>
 	</head>
 	<body id="topPage">
+		<!-- ----------------------ハンバーガーメニュー------------------------------- -->
+		<div class="mask" id="mask"></div>
+		<a class="menuButton" id="menuButton">
+			<div></div>
+			<div></div>
+			<div></div>
+		</a>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html"><img src="img/Nav-top.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="odori.html"><img src="img/Nav-odori.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="nakajima.html"><img src="img/Nav-nakajima.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="susukino.html"><img src="img/Nav-susukino.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="makomanai.html"
+						><img src="img/Nav-makomanai.jpg" alt=""
+					/></a>
+				</li>
+			</ul>
+		</nav>
+		<!-- ---------------------------------------------------------------------- -->
+
 		<div id="wrapper">
 			<header>
-				<h1><a href="index.html"></a></h1>
+				<h1>
+					<a href="index.html"><img src="img/header.png" alt="" /></a>
+				</h1>
 			</header>
-
-			<nav class="gnav">
-				<ul>
-					<li><a href="top.html"></a></li>
-					<li><a href="odori.html"></a></li>
-					<li><a href="nakajima.html"></a></li>
-					<li><a href="susukino.html"></a></li>
-					<li><a href="makomanai.html"></a></li>
-				</ul>
-			</nav>
 
 			<h2>TOP</h2>
 
 			<main>
-				<fieldset id="top-border">
-					<legend id="top-label">当サイトについて</legend>
-					<section id="top-area">
+				<!-- 当サイトの説明欄 -->
+				<section id="top-area">
+					<fieldset id="top-border">
+						<legend id="top-label">当サイトについて</legend>
+
 						<div id="top-image-collabo-area">
 							<img id="top-image" src="img/collabo.png" />
 						</div>
 						<div id="top-description-area">
-							<p>
+							<p id="top-description">
 								1950年に地元の中・高校生が6つの雪像を大通公園に展示したことで
 								始まった「さっぽろ雪まつり」は、
 								今では国内外から200万人以上が訪れる札幌の冬の一大イベント。
@@ -41,23 +66,84 @@
 								当サイトでは、雪まつりの各会場にて展示された雪像や
 								各会場の歴史などを紹介していく。
 								<br />
+								<span class="guide-msg">
+									（右上のハンバーガーメニューから各会場の画面に移動できます）
+								</span>
 								<br />
-								左：初音みくとバンドリのコラボ雪像
 								<br />
-								右：ファイナルファンタジーの雪像
+								画像の雪像は初音ミクとバンドリのコラボ雪像と、
+								ファイナルファンタジーのコラボ雪像です。
 							</p>
 						</div>
 						<div id="top-image-ff-area">
 							<img id="top-image" src="img/FF.jpg" />
 						</div>
+					</fieldset>
+				</section>
 
-						<!-- ここに個々のコンテンツを入力 -->
-					</section>
-				</fieldset>
+				<!-- 雪ミクの説明欄 -->
+				<section id="yukimiku-area" class="main__contents">
+					<img id="top_yukimiku" src="img/top_yukimiku.jpg" />
+					<fieldset id="yukimiku-border">
+						<legend id="yukimiku-label">雪ミクを応援します</legend>
+						<p id="yukimiku-description">
+							&nbsp;&nbsp;「雪ミク」は、北海道を応援するキャラクターです。
+							<br />
+							&nbsp;&nbsp;2010年の『さっぽろ雪まつり』で
+							"真っ白い「初音ミク」の雪像"を作ったことをきっかけに誕生し、それ以来「雪ミク」が主役のフェスティバル『SNOW
+							MIKU』が毎年北海道で開催されています。
+							<br />
+							&nbsp;&nbsp;当サイトは、そんな雪まつりにはかかせない「雪ミク」を応援しています。
+							<br />
+							<br />
+							<span class="guide-msg"
+								>※「雪ミク」のアイコンをクリックすると、 過去のSNOW
+								MIKU会場の雪像を表示します。</span
+							>
+						</p>
+					</fieldset>
 
-				<fieldset id="guide-border">
-					<legend id="guide-label">各会場のご案内</legend>
-					<section id="guide-area">
+					<!-- オーバーレイ画面 -->
+					<div id="overlay">
+						<div id="overlayWindow">
+							<h2>SNOW MIKU 会場</h2>
+							<table id="yukimiku-table" class="main__contents">
+								<tr>
+									<th>２０２０年</th>
+									<th>２０１９年</th>
+								</tr>
+								<tr>
+									<td>
+										<img class="yukimiku-image" src="img/yukimiku_2020.jpg" />
+									</td>
+									<td>
+										<img class="yukimiku-image" src="img/yukimiku_2019.jpg" />
+									</td>
+								</tr>
+								<tr>
+									<th>２０１８年</th>
+									<th>２０１７年</th>
+								</tr>
+								<tr>
+									<td>
+										<img class="yukimiku-image" src="img/yukimiku_2018.jpg" />
+									</td>
+									<td>
+										<img class="yukimiku-image" src="img/yukimiku_2017.jpg" />
+									</td>
+								</tr>
+							</table>
+							<button id="close_button">閉じる</button>
+						</div>
+					</div>
+				</section>
+
+				<div class="cb"></div>
+
+				<!-- 他画面へのガイドエリア（フルサイズ用） -->
+				<section id="guide-area">
+					<fieldset id="guide-border" class="main__contents">
+						<legend id="guide-label">各会場のご案内</legend>
 						<table id="guide-table">
 							<tr>
 								<th colspan="2">大通り会場</th>
@@ -73,6 +159,11 @@
 									<p class="guide-description">
 										札幌の都心部・大通公園に、約1.5キロメートルにわたる雪と氷の世界が出現。
 										年人気のプロジェクションマッピングも見逃せません。
+										<br />
+										<br />
+										<span class="guide-msg"
+											>※画像をクリックすると、大通り会場のページに移動します。</span
+										>
 									</p>
 								</td>
 								<td>
@@ -84,6 +175,11 @@
 									「ゆきあかりin中島公園」は
 									地域住民、生徒・学生、近隣の施設・企業等が協力して、
 									中島公園に光の花を咲かせる幻想的で楽しいイベント。
+									<br />
+									<br />
+									<span class="guide-msg"
+										>※画像をクリックすると、中島公園会場のページに移動します。</span
+									>
 								</td>
 							</tr>
 							<tr>
@@ -100,6 +196,11 @@
 									<p class="guide-description">
 										「氷を楽しむ」をテーマに、幻想的な氷像が立ち並びます。
 										さらに、氷の女王の撮影会など、すすきのならではの催しが繰り広げられます。
+										<br />
+										<br />
+										<span class="guide-msg"
+											>※画像をクリックすると、すすきの会場のページに移動します。</span
+										>
 									</p>
 								</td>
 								<td>
@@ -108,17 +209,117 @@
 									</a>
 								</td>
 								<td class="guide-description">
-									2005年（第56回）を最後に真駒内会場40年の歴史に幕を下ろし、
-									翌年、新たに「さとらんど」を第二会場としてオープン。
-									その後、第二会場を「さとらんど」から「つどーむ」に変更しています。
+									2005年を最後に真駒内会場40年の歴史に幕を下ろし、
+									新たに「さとらんど」を第二会場としてオープン。
+									その後、第二会場を「つどーむ」に変更しています。
+									<br />
+									<br />
+									<span class="guide-msg"
+										>※画像をクリックすると、真駒内会場のページに移動します。</span
+									>
 								</td>
 							</tr>
 						</table>
-					</section>
-				</fieldset>
+					</fieldset>
+				</section>
+
+				<!-- 他画面へのガイドエリア（ハーフサイズ用） -->
+				<section id="guide-area-half">
+					<fieldset id="guide-border-half" class="main__contents">
+						<legend id="guide-label">各会場のご案内</legend>
+						<table id="guide-table">
+							<tr>
+								<th colspan="2">大通り会場</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="odori.html">
+										<img class="guide-image" src="img/guide-odori.jpg" />
+									</a>
+								</td>
+								<td>
+									<p class="guide-description">
+										札幌の都心部・大通公園に、約1.5キロメートルにわたる雪と氷の世界が出現。
+										年人気のプロジェクションマッピングも見逃せません。
+										<br />
+										<br />
+										<span class="guide-msg"
+											>※画像をクリックすると、大通り会場のページに移動します。</span
+										>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<th colspan="2">中島公園会場</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="nakajima.html">
+										<img class="guide-image" src="img/guide-nakajima.jpg" />
+									</a>
+								</td>
+								<td class="guide-description">
+									「ゆきあかりin中島公園」は
+									地域住民、生徒・学生、近隣の施設・企業等が協力して、
+									中島公園に光の花を咲かせる幻想的で楽しいイベント。
+									<br />
+									<br />
+									<span class="guide-msg"
+										>※画像をクリックすると、中島公園会場のページに移動します。</span
+									>
+								</td>
+							</tr>
+							<tr>
+								<th colspan="2">すすきの会場</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="susukino.html">
+										<img class="guide-image" src="img/guide-susukino.jpg" />
+									</a>
+								</td>
+								<td>
+									<p class="guide-description">
+										「氷を楽しむ」をテーマに、幻想的な氷像が立ち並びます。
+										さらに、氷の女王の撮影会など、すすきのならではの催しが繰り広げられます。
+										<br />
+										<br />
+										<span class="guide-msg"
+											>※画像をクリックすると、すすきの会場のページに移動します。</span
+										>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<th colspan="2">真駒内会場</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="makomanai.html">
+										<img class="guide-image" src="img/guide-makomanai.jpg" />
+									</a>
+								</td>
+								<td class="guide-description">
+									2005年を最後に真駒内会場40年の歴史に幕を下ろし、
+									新たに「さとらんど」を第二会場としてオープン。
+									その後、第二会場を「つどーむ」に変更しています。
+									<br />
+									<br />
+									<span class="guide-msg"
+										>※画像をクリックすると、真駒内会場のページに移動します。</span
+									>
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+				</section>
 			</main>
 
-			<footer></footer>
+			<footer>
+				<img src="img/footer.png" alt="" />
+			</footer>
+
+			<script src="js\script.js"></script>
 		</div>
 	</body>
 </html>

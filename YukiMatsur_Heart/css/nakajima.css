@@ -19,25 +19,33 @@ body {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 header {
     margin-bottom: 15px;
     width: 100%;
-    height: 295px;
+
 }
 
-header h1 {
-    width: 100%;
-    height: 100%;
-}
+
 
 header h1 a {
     display: block;
-    height: 100%;
+
     transition: 0.4s;
     opacity: 1;
-    background: url(../img/header.png) no-repeat center center;
+    overflow: hidden;
+    position: relative;
+
+}
+header h1 a img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    
 }
 
 h2 {
@@ -56,14 +64,20 @@ h3 {
     padding-left: 10px;
     text-align: center;
     margin-bottom: 30px;
-    padding-top: 50px;
-    text-shadow: 2px 2px 2px rgb(255,255,255);
+    padding: 70px 0 60px;
+    text-shadow: -1px 1px 1px rgb(255,255,255);
 }
-
+li {
+    list-style: none;
+}
 a {
     text-decoration: none;
     transition: 0.4s;
     opacity: 1;
+    color: rgb(34, 34, 34);
+}
+img {
+    vertical-align: bottom;
 }
 
 a:hover,
@@ -73,6 +87,7 @@ header h1 a:hover {
 
 .gnav {
     margin-bottom: 50px;
+    display: none;splay: none;
     
 }
 
@@ -103,6 +118,10 @@ header h1 a:hover {
 
 }
 
+.gnav ul li {
+    background-size: cover;
+}
+
 .gnav ul li:nth-child(1) {
     background: url(../img/Navi_Top.png) no-repeat center center;
 }
@@ -112,11 +131,11 @@ header h1 a:hover {
 }
 
 .gnav ul li:nth-child(3) {
-    background: url(../img/Navi_Susukino.png) no-repeat center center;
+    background: url(../img/Navi_Nakajima.png) no-repeat center center;
 }
 
 .gnav ul li:nth-child(4) {
-    background: url(../img/Navi_Nakajima.png) no-repeat center center;
+    background: url(../img/Navi_Susukino.png) no-repeat center center;
 }
 
 .gnav ul li:nth-child(5) {
@@ -127,23 +146,28 @@ header h1 a:hover {
 
 main {
     display: block;
-    margin: 0 auto 100px;
+    margin: 0 auto 200px;
 }
-
 footer {
-    background:url(../img/footer.png);
-    height: 110px;
+    position: relative;
+}
+footer img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
 }
 
 
 
-.main__contener__intro dt {
+.main__contener__intro figure {
     width: 100%;
     height: 400px;
     overflow: hidden;
     position: relative;
 }
-.main__contener__intro dt:after {
+.main__contener__intro figure:after {
     content: "";
     width: calc(100% - 20px);
     height: calc(100% - 20px);
@@ -153,28 +177,61 @@ footer {
     position: absolute;
     box-shadow: 1px 1px 4px rgb(68, 68, 68);
 }
-.main__contener__intro dt img {
+.main__contener__intro figure img {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 47%;
     transform: translate(-50%,-50%);
 
 }
 
 .main__contener__intro {
     width: 95%;
-    margin: 0 auto 100px;
+    margin: 0 auto 80px;
     padding-top: 20px;
     
 }
-.main__contener__intro dd {
+.main__contener__intro p {
     padding-top: 30px;
-
+    width: 90%;
     margin: 0 auto;
 }
+.nakajima__innernav,
+.footer__nav ul {
+    display: flex;
+    width: 700px;
+    margin: 0 auto 100px;
+    justify-content: space-around;
+
+}
+.nakajima__innernav li,
+.footer__nav ul li {
+    text-align: center;
+    width: calc(100%/5);
+    border-left: 1px solid rgb(183, 186, 189);
+}
+.nakajima__innernav li:last-child {
+    border-right: 1px solid rgb(183, 186, 189);    
+}
+.nakajima__innernav li a,
+.footer__nav ul li a {
+    font-size: 0.8em;
+    color: rgb(124, 124, 124);
+}
+.nakajima__innernav li a:hover,
+.footer__nav ul li a:hover {
+    color: rgb(86, 145, 180);
+    opacity: 1;   
+}
+.nakajima__innernav li a i {
+    display: block;
+    font-size: 3em;
+    padding-bottom: 5px;
+
+}
 .main__contents {
-    padding: 20px 15px 80px;
-    margin-bottom: 100px;
+    padding: 20px 15px 180px;
+
     background: url(../img/nakajima_row1.png) no-repeat bottom right;
     position: relative;
 }
@@ -193,6 +250,7 @@ footer {
     flex-wrap: wrap;    
     justify-content: center;
 }
+
 .nakajima__colum01 {
     width: 360px;
 }
@@ -207,7 +265,7 @@ footer {
     position: relative;
 }
 
-.main__contents01 dl dt  img {
+.nakajima__colum01 dt img {
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
@@ -215,12 +273,12 @@ footer {
 }
 
 .nakajima__colum01 dd {
-    padding: 15px 15px 50px;
-    width: 80%;
+    padding: 15px 0 50px;
     box-sizing: border-box;
     font-size: 1.4rem;
     margin: 0 auto;
     line-height: 1.2;
+    text-align: center;
 }
 .nakajima__colum02 {
     width:  calc(100% - 400px);
@@ -240,7 +298,7 @@ footer {
     height: 250px;
     box-sizing: border-box;
     position: relative;
-    margin: 10px 20px 80px;
+    margin: 10px 20px 110px;
 }
 
 .main__contents:nth-of-type(2) .nakajima__colum01 dt {
@@ -254,17 +312,563 @@ footer {
     margin-bottom: 5px;
     color: rgb(5, 62, 102);
 }
+.nakajima__colum03 {
+    text-align: center;
+    padding-top: 50px;
+}
+.nakajima__colum03 a {
+    border-bottom: 1px solid rgb(34, 34, 34);
+    color: rgb(34, 34, 34);
+}
+.nakajima__colum03 a:hover {
+    border-bottom: 1px solid rgb(23, 78, 129);
+    color: rgb(23, 78, 129);   
+}
+.nakajima__row iframe {
+    width: calc(100% - 335px);
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+.nakajima__row table {
+    display: table;
+    margin-right: 15px;
+    background: rgba(255,255,255,0.7);
+    box-sizing: border-box;
+    margin-bottom: 15px;
+
+}
+.nakajima__row table tr th {
+    text-align-last: left;
+    padding-left: 10px;
+}
+.nakajima__row table tr td {
+    padding: 0 0 15px 15px;
+
+}
+.nakajima__row table tr:nth-of-type(7) td {
+    padding: 30px 0;
+    text-align: center;
+}
+.nakajima__grid {
+    display:grid;
+	grid-template-rows:200px 200px;
+    grid-template-columns:32% 33% 32%;
+    width: 95%;
+    margin: 0 auto;
+    gap: 15px;
+    box-sizing: border-box;
+}
+.nakajima__grid__item {
+    text-align: center; 
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;    
+   
+}
+.nakajima__grid__item a {
+    display: grid;
+    padding: 20px 10px 10px;
+    line-height: 1.2;
+    height: calc(100% - 30px);
+    transition: 0.3s;
+    border-radius: 8px; 
+    background: linear-gradient(to bottom,rgba(255,255,255,0.9),rgba(255,255,255,0)) bottom right;   
+    color: rgb(34, 34, 34);    
+}
+.nakajima__grid__item a:hover {
+    background: url(../img/nakajima_snow1.png) rgba(0,0,0,0.5) bottom right no-repeat;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.nakajima__grid__item:nth-child(1) {
+    background-image: url(../img/nakajima_park.jpg);
+}
+.nakajima__grid__item:nth-child(2) {
+    background-image: url(../img/nakajima_north.jpg);
+}
+.nakajima__grid__item:nth-child(3) {
+    background-image: url(../img/nakajima_resol.jpg);
+}
+.nakajima__grid__item:nth-child(4) {
+    background-image: url(../img/nakajima_quintessa.jpg);
+}
+.nakajima__grid__item:nth-child(5) {
+    background-image: url(../img/nakajima_unwind.jpg);
+}
+.nakajima__grid__item:nth-child(6) {
+    background-image: url(../img/nakajima_vessel.jpg);
+}
+.main__contents:nth-of-type(5) {
+    padding: 20px 15px 120px;
+
+}
+#contact form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+
+}
+#contact form:before {
+    position: absolute;
+    background: rgb(240,240,240) url(../img/nakajima_row1.png) bottom 120px left 30px no-repeat;
+    transform: scale(-1,-1);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    content: "";
+    z-index: -1;
+
+}
+#contact form dl dt {
+    font-size: 1.2em;
+    position: relative;
+
+}
+
+#contact form dl dd {
+    padding: 0 0 25px 20px;
+
+}
+#contact form dl dd:nth-of-type(3) {
+    padding: 0 20px 25px 20px;
+
+}
+#contact form .shubetsu {
+    margin-left: 10px;
+}
+#contact form .email,
+#contact form .message {
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    padding-left: 8px;
+    background: rgba(255,255,255,0.7);
+
+}
+#contact form .email {
+    width: 300px;    
+    line-height: 2.5;
+    font: inherit;
+    color: rgb(34, 34, 34);
+}
+#contact form .message {
+    padding: 8px 15px;
+    font: inherit;
+    width: calc(100% - 30px);
+    color: rgb(34, 34, 34);
+}
+
+#contact form button {
+    margin-left: 20px;
+    height: 35px;
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    font: 1em "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+    z-index: 1;
+    background:rgb(147, 193, 226);
+    color: rgb(34,34,34);  
+}
+#contact form button:before {
+    background:rgb(75, 134, 177);
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    transition: 0.2s;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 4px;
+}
+#contact form button:hover:before {
+    width: 100%;
+}
+#contact form button:hover {
+    color: rgb(255,255,255);  
+}
+#contact form textarea::placeholder {
+    font: 1em "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    cursor: pointer;    
+}
+
+.footer__nav {
+    margin-bottom: 30px;
+}
+.footer__nav ul {
+    margin-bottom: 0;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+
+}
+.footer__nav ul li {
+    border-left: none;
+    width: auto;
+
+    position: relative;
+}
+.footer__nav ul li:before {
+    background: url(../img/nakajima_footer_nav.png) no-repeat left 15px top;  
+    opacity: 0.6;  
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+.footer__nav ul li:hover:before {
+    opacity: 1;
+}
+.footer__nav ul li a {
+    font-size: 1em;
+    display: block;
+    color: rgb(34, 34, 34);
+    position: relative; 
+    padding: 8px 30px;
+    transition: 0.3s;
+    margin: 0 10px;
+}
+.footer__nav ul li a:hover {
+    color: rgb(12, 84, 136);
+}
+.footer__nav ul li a i {
+    margin-right: 5px;
+    font-size: 1.4em;
+    position: relative;
+    bottom: -2px;
+}
+.material-icons {
+    position: relative;
+    bottom: -5px;
+}
+.required {
+    font-size: 0.8em;
+
+}
+.go__top {
+    width: 95%;
+    margin: 0 auto 60px;
+    text-align: right; 
+    padding-top: 30px;   
+    position: relative;
+}
+.go__top a {
+    color: rgb(75, 134, 177);  
+    transition: 0.4s; 
+    font-size: 1em;
+}
+.go__top a:hover {
+    color: rgb(17, 59, 99);
+    opacity: 1;
+    position: relative;
+
+}
+
+
+/* ------------------ハンバーガーメニュー----------------------- */
+
+
+#nav {
+    width: 200px;
+    padding-top: 200px;
+}
+
+.menuButton {
+    display: block;
+    height: 80px;
+    width: 80px;
+    background: rgb(228, 228, 228);
+    opacity: 0.9;
+    border-radius: 1em;
+    position: fixed;
+    /* 固定コマンド */
+    top: 0;
+    right: 0;
+    transition: .3s;
+    z-index: 51;
+}
+
+.menuButton div {
+    height: 1px;
+    width: 60%;
+    background: rgb(71, 71, 71);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: ease-out 0.3s;
+}
+
+.menuButton.active {
+    background-color: #fff;
+}
+
+.menuButton div:nth-of-type(1) {
+    transform: translate(-50%, -15px);
+}
+
+.menuButton div:nth-of-type(3) {
+    transform: translate(-50%, 15px);
+}
+
+.menuButton.active div:nth-of-type(1) {
+    transform: rotate(45deg) translate(-50%, -0px);
+    transform-origin: 0% 50%;
+}
+
+.menuButton.active div:nth-of-type(3) {
+    transform: rotate(-45deg) translate(-50%, 0px);
+    transform-origin: 0% 50%;
+}
+
+.menuButton.active div:nth-of-type(2) {
+    width: 70%;
+    height: 70%;
+    border: 1px solid #333;
+    background-color: transparent;
+    border-radius: 15%;
+}
+
+#nav {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(100%);
+    transition: 0.3s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    max-height: 100vh;
+    height: 100vh;
+    z-index: 50;
+    overflow: auto;
+    box-shadow: 0 0 10px 3px rgb(87, 87, 87);
+}
+
+#nav ul {
+    text-align: center;
+    list-style: none;
+}
+
+#nav ul li:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+#nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0%);
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.mask.active {
+    opacity: 0.7;
+    visibility: visible;
+}
+
+#nav img {
+    background-size: cover;
+    width: 150px;
+}
+/* #mask, #nav, #menuButton {
+    display: none;
+} */
+
+/* --------------------------------------------- */
 
 
 
-@media screen and (max-width: 960px) {
 
 
+
+
+
+@media screen and (max-width: 1000px) {
+#wrapper {
+    width: 100%;
+}
+header h1 a img {
+    width: 100%;
+}
 .nakajima__colum02 {
     min-width: 80%;
 }
 
+.nakajima__grid {
+
+	grid-template-rows:150px 150px;
+
+}
+.gnav {
+    display: none;
+}
+#mask, #nav, #menuButton {
+    display: block;
+}
+footer img {
+    width: 100%;    
+}
+}
+
+
+@media screen and (max-width: 800px) {
+
+.nakajima__innernav {
+
+    width: 80%;
+}
+.nakajima__colum02 {
+    width: 90%;
+}
+h3 {
+    padding-top: 85px;
+    padding-bottom: 10px;
+}
+.main__contents::before {
+    background: url(../img/nakajima_row1.png) top left / 160px 136px no-repeat ;
+    opacity: 0.5;
+}
+.nakajima__row iframe {
+    width: 95%;
+}
+#contact form {
+    width: 90%;
+}
+#contact form label {
+    display: block;
+}
+#contact form button {
+    display: block;
+    margin: 0 auto;
+}
+.footer__nav ul li {
+    padding: 8px 0;
+
+}
+.footer__nav ul li:before {
+    background-position: left top;    
+}
+.footer__nav ul li a {
+    font-size: 0.9em;
+    padding: 8px 0 0 10px;
+
+}
+.go__top {
+    padding-bottom: 0;
+}
+}
+@media screen and (max-width: 600px) {
+
+.nakajima__innernav li a {
+    font-size: 0.8em;
+} 
+.nakajima__innernav li a p {
+    display: none;
+}
+.nakajima__innernav li a i {
+    font-size: 2.4em;
+
+}
+    
+.nakajima__grid {
+    display:grid;
+    grid-template-columns:48% 48%;
+    width: 100%;
+	grid-template-rows:150px 150px 150px;
+
+}
+#contact form {
+    box-sizing: border-box;
+    width: 95%;
+}
+#contact form dl dd {
+    padding: 0 0 25px 10px;
+}
+#contact form dl dd:nth-of-type(3) {
+    padding: 0 10px 25px 10px;   
+}
+#contact form .message,
+#contact form .email {
+    width: calc(100% - 30px);
+}
+.footer__nav ul li a {
+    font-size: 0.8em;
+}
+.footer__nav ul li::before {
+    background-position: center center;
+}
+}
 
 
 
+@media screen and (max-width: 400px) {
+
+.main__contener__intro dt {
+    height: 250px;
+}
+.main__contener__intro dt img {
+    height: 350px;
+
+}
+.nakajima__innernav {
+    width: 90%;
+    box-sizing: border-box;
+}
+.nakajima__innernav li {
+
+
+    box-sizing: border-box;
+
+}
+
+.nakajima__colum01 {
+
+    max-width: 300px;
+}
+.nakajima__colum01 dt {
+    max-height: 300px;
+}
+
+.nakajima__colum02 {
+    min-width: 95%;
+}
+#contact form {
+    padding: 12px 15px 30px;
+
+}
+#contact form:before {
+    background: rgba(240,240,240,0.5) url() bottom 40px right 30px no-repeat ;    
+}
+#contact form button {
+    display: block;
+    margin: 0 auto;
+}
+
+.footer__nav ul li a {
+    padding: 0;
+}
 }

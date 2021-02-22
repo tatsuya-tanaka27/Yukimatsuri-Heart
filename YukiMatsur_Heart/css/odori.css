@@ -1,80 +1,7 @@
 @charset "utf-8";
-.table3 {
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    line-height: 1.5;
-    width: 90%;
-    /* position: fixed; */
-}
-
-.table3 th {
-    padding: 10px;
-    font-weight: bold;
-    vertical-align: top;
-    background: #0099e3;
-    color: #ffffff;
-}
-
-.table3 td {
-    padding: 10px;
-    vertical-align: top;
-}
-
-body {
-    /* display: flex; */
-}
-
-.table3 tr:nth-child(even) {
-    background: #cee7ff;
-}
-
-.waku {
-    /* background-color: #0099e3; */
-    display: flex;
-    width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
-
-.year {
-    background-color: #ccc;
-    width: 20%;
-    position: absolute;
-    /* float: left; */
-}
-
-.box {
-    /* background-color: #cee7ff; */
-    width: 48%;
-    margin: 1%;
-    height: 300px;
-    display: flex;
-}
-
-.img1 {
-    width: 200px;
-    height: 290px;
-    margin: 10px;
-}
-
-.remarks {
-    /* float: right; */
-}
-
-.now {
-    background-color: greenyellow;
-    margin: auto;
-    width: 80%;
-    text-align: center;
-}
-
-.now img {
-    width: 100%;
-}
-
-.topremark {
-    margin: 20px;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .his1 {
@@ -88,14 +15,34 @@ body {
     margin: 100px auto auto auto;
 }
 
-.img {
-    display: flex;
+.remark {
+    padding: 20px 15px 80px;
+    background: url(../img/nakajima_row1.png) no-repeat bottom right;
+    position: relative;
 }
 
-.any {
-    width: 50px;
-    height: 50px;
-    /* border-radius: ; */
+.remark:before {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    content: "";
+    background: url(../img/nakajima_row1.png) no-repeat top left;
+    z-index: -1;
+}
+
+.history {
+    padding: 20px 15px 80px;
+    background: url(../img/nakajima_row1.png) no-repeat bottom right;
+    position: relative;
+}
+
+.history:before {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    content: "";
+    background: url(../img/nakajima_row1.png) no-repeat top left;
+    z-index: -1;
 }
 
 h4 {
@@ -109,40 +56,17 @@ h4 {
     margin-bottom: 5px;
     font-size: 20px;
     margin-top: 0;
-    width: 70%;
+    width: 80%;
     margin: 0 auto auto auto;
 }
 
 body p {
-    text-align: center;
     font-size: 16px;
-    /* margin: 0; */
 }
-
-.history img {
-    width: 70%;
-    margin-bottom: 30px;
-    /* display: flex; */
-}
-
-
-/* .sen {
-    background-color: gray;
-    width: 3px;
-    height: 500px;
-    margin-left: 20%;
-    float: left;
-} */
 
 .history {
     text-align: center;
 }
-
-
-/* * {
-    margin: 0;
-    padding: 0;
-} */
 
 html {
     font: 62.5% "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
@@ -179,17 +103,16 @@ header h1 a {
 }
 
 .remark img {
-    width: 70%;
+    width: 80%;
 }
 
 .remark {
     position: relative;
     text-align: center;
-    /* padding-bottom: 20%; */
 }
 
 .remark p {
-    width: 70%;
+    width: 80%;
     margin: 5px auto auto auto;
     text-align: left;
 }
@@ -231,6 +154,7 @@ header h1 a:hover {
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
+    padding: 0;
 }
 
 .gnav ul li {
@@ -292,6 +216,22 @@ footer {
     }
 }
 
+.slide {
+    position: relative;
+    height: 400px;
+}
+
+.slide img {
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
 
 /* ------------------ハンバーガーメニュー----------------------- */
 
@@ -308,7 +248,6 @@ nav {
     opacity: 0.9;
     border-radius: 1em;
     position: fixed;
-    /* 固定コマンド */
     top: 0;
     right: 0;
     transition: .3s;
@@ -349,8 +288,8 @@ nav {
 }
 
 .menuButton.active div:nth-of-type(2) {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     border: 1px solid #333;
     background-color: transparent;
     border-radius: 15%;

@@ -1,109 +1,280 @@
 @charset "UTF-8";
-*{
-	margin:0;
-	padding:0;
+* {
+	margin: 0;
+	padding: 0;
 }
-#wrapper{
-    width: 1000px;
-    margin: 0 auto;
+html {
+	font: 62.5% "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
+		"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E",
+		"ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
-body{
-    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
-    font-size: 16px;
+body {
+	font-size: 1.6rem;
+	color: rgb(34, 34, 34);
+}
+#wrapper {
+	width: 100rem;
+	margin: 0 auto;
+}
+header {
+	width: 100%;
+	height: 29.5rem;
+	margin-bottom: 1.5rem;
+	background: url(../img/header.png) no-repeat center center;
+	background-size: cover;
+}
+a.header:hover {
+	opacity: 0.8;
+}
+h2 {
+	background: url(../img/h2bg.png) no-repeat bottom right;
+	text-align: center;
+	color: rgb(0, 111, 191);
+	height: 4rem;
+	box-sizing: border-box;
+	padding-top: 0.5rem;
+	margin-bottom: 4rem;
+	font-size: 2rem;
+}
+nav {
+	width: 200px;
+	padding-top: 200px;
+}
+.menuButton {
+	display: block;
+	height: 80px;
+	width: 80px;
+	background: rgb(228, 228, 228);
+	opacity: 0.9;
+	border-radius: 1em;
+	position: fixed;
+	/* 固定コマンド */
+	top: 0;
+	right: 0;
+	transition: 0.3s;
+	z-index: 51;
+}
+.menuButton div {
+	height: 1px;
+	width: 60%;
+	background: rgb(71, 71, 71);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: ease-out 0.3s;
+}
+.menuButton.active {
+	background-color: #fff;
+}
+.menuButton div:nth-of-type(1) {
+	transform: translate(-50%, -15px);
+}
+.menuButton div:nth-of-type(3) {
+	transform: translate(-50%, 15px);
+}
+.menuButton.active div:nth-of-type(1) {
+	transform: rotate(45deg) translate(-50%, -0px);
+	transform-origin: 0% 50%;
+}
+.menuButton.active div:nth-of-type(3) {
+	transform: rotate(-45deg) translate(-50%, 0px);
+	transform-origin: 0% 50%;
+}
+.menuButton.active div:nth-of-type(2) {
+	width: 70%;
+	height: 70%;
+	border: 1px solid #333;
+	background-color: transparent;
+	border-radius: 15%;
+}
+nav {
+	opacity: 0;
+	visibility: hidden;
+	transform: translate(100%);
+	transition: 0.3s;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: rgb(255, 255, 255);
+	max-height: 100vh;
+	height: 100vh;
+	z-index: 50;
+	overflow: auto;
+	box-shadow: 0 0 10px 3px rgb(87, 87, 87);
+}
+nav ul {
+	text-align: center;
+	list-style: none;
+}
+nav ul li:not(:first-of-type) {
+	margin-top: 20px;
+}
+nav.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0%);
+}
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(221, 221, 221);
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+	transition: 0.3s;
+}
+.mask.active {
+	opacity: 0.7;
+	visibility: visible;
+}
+nav img {
+	background-size: cover;
+	width: 150px;
+}
+main {
+	margin-bottom: 5rem;
 }
 .gnav {
-    margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 .gnav ul {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0 auto;
 }
 .gnav ul li {
-    list-style: none;
-    transition: 0.4s;
-    opacity: 1;    
-    border-radius: 10px;  
-    margin: 0 5px 15px;  
+	list-style: none;
+	transition: 0.4s;
+	opacity: 1;
+	border-radius: 1rem;
+	margin: 0 0.5rem 1.5rem;
 }
 .gnav ul li:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 .gnav ul li a {
-    display: block;
-    width: 150px;
-    height: 30px;
+	display: block;
+	width: 15rem;
+	height: 3rem;
 }
 .gnav ul li:nth-child(1) {
-    background: url(../img/Nav-top.jpg) no-repeat center center;
-    background-size: cover;
+	background: url(../img/Nav-top.jpg) no-repeat center center;
+	background-size: cover;
 }
 .gnav ul li:nth-child(2) {
-    background: url(../img/Nav-odori.jpg) no-repeat center center;
-    background-size: cover;
+	background: url(../img/Nav-odori.jpg) no-repeat center center;
+	background-size: cover;
 }
 .gnav ul li:nth-child(3) {
-    background: url(../img/Nav-nakajima.jpg) no-repeat center center;
-    background-size: cover;
+	background: url(../img/Nav-nakajima.jpg) no-repeat center center;
+	background-size: cover;
 }
 .gnav ul li:nth-child(4) {
-    background: url(../img/Nav-susukino.jpg) no-repeat center center;
-    background-size: cover;
+	background: url(../img/Nav-susukino.jpg) no-repeat center center;
+	background-size: cover;
 }
 .gnav ul li:nth-child(5) {
-    background: url(../img/Nav-makomanai.jpg) no-repeat center center;
-    background-size: cover;
+	background: url(../img/Nav-makomanai.jpg) no-repeat center center;
+	background-size: cover;
 }
-.index{
-    width: 700px;
-    font-size: 36px;
-    border-top: double 4px #2097b6;
-    border-bottom: double 4px #2097b6;
-    margin-bottom: 10px;
+.index {
+	width: 70rem;
+	font-size: 3.6rem;
+	border-top: double 0.4rem #2097b6;
+	border-bottom: double 0.4rem #2097b6;
+	margin-bottom: 1rem;
 }
-.sidebar{
-    width: 200px;
-    margin: 0 50px;
-    top: 20px;
-    position: sticky;
-    height: 100%;
+p.main {
+	text-indent: 1.6rem;
+	line-height: 1.7;
 }
-.m-container{
-    display: flex;
-    justify-content: space-between
-    align-items;
+p.side {
+	font-size: 1.2rem;
+	color: rgb(75, 70, 70);
+	text-align: center;
+	line-height: 1.3;
+	margin-bottom: 0.2rem;
 }
-.mh-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a {
+	text-decoration: none;
 }
-p{
-    text-indent: 16px;
-    line-height: 1.7;
+aside {
+	background-color: rgba(104, 198, 221, 0.5);
+	border-radius: 0.5rem;
 }
-.mo-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+img.photo {
+	vertical-align: top;
+	opacity: 1;
+	transition: transform 0.5s linear;
 }
-img.float_left{
-    float: left;
-    margin: 0 20px 0 20px;
+img.photo_1 {
+	border-radius: 0.5rem 0.5rem 0 0;
 }
-.ms-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+a.sl:hover {
+	opacity: 0.5;
 }
-.mt-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.sidebar {
+	width: 20rem;
+	margin: 2rem 5rem;
+	top: 2rem;
+	position: sticky;
+	height: 100%;
 }
-p.side{
-    font-size: 12px;
-    margin: 0;
+.m-container {
+	display: flex;
+	justify-content: space-between align-items;
+	center: ;
+}
+.mks-container {
+	display: flex;
+	flex-direction: column;
+}
+.mh-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.mo-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+img.float_left {
+	float: left;
+	margin: 0 2rem;
+}
+.ms-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.mt-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.mb {
+	position: relative;
+}
+.mb:before {
+	background-image: url(../img/nakajima_row1.png), url(../img/nakajima_row1.png),
+		url(../img/nakajima_row1.png), url(../img/nakajima_row1.png),
+		url(../img/nakajima_row1.png);
+	background-position: right 5rem top 1rem, left 10rem top 40rem,
+		right 8rem top 95rem, right 20rem top 130rem, left 3rem bottom 3rem;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	content: "";
+	top: 0;
+	left: 0;
+	opacity: 0.3;
 }

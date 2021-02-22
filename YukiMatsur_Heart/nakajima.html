@@ -1,154 +1,420 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nakajima | Snow Festival Team Heart</title>
-    <link rel="stylesheet" href="css/nakajima.css">
-</head>
-<body id="nakajima">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>中島公園会場</title>
+		<link rel="stylesheet" href="css/nakajima.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+		/>
+	</head>
 
-    <div id="wrapper">
+	<body id="nakajima">
+		<div id="wrapper">
+			<header>
+				<h1>
+					<a href="index.html"><img src="img/header.png" alt="" /></a>
+				</h1>
+			</header>
 
-        <!-- <input type="checkbox" id="gnavi-btn">   -->
+			<nav class="gnav">
+				<ul>
+					<li><a href="index.html"></a></li>
+					<li><a href="odori.html"></a></li>
+					<li><a href="nakajima.html"></a></li>
+					<li><a href="susukino.html"></a></li>
+					<li><a href="makomanai.html"></a></li>
+				</ul>
+			</nav>
 
-        <header>
-            <h1><a href="index.html"></a></h1>
-        </header>
+			<!-- ハンバーガーメニュー -->
+			<div class="mask" id="mask"></div>
+			<a class="menuButton" id="menuButton">
+				<div></div>
+				<div></div>
+				<div></div>
+			</a>
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="index.html"><img src="img/Nav-top.jpg" alt="" /></a>
+					</li>
+					<li>
+						<a href="odori.html"><img src="img/Nav-odori.jpg" alt="" /></a>
+					</li>
+					<li>
+						<a href="nakajima.html"
+							><img src="img/Nav-nakajima.jpg" alt=""
+						/></a>
+					</li>
+					<li>
+						<a href="susukino.html"
+							><img src="img/Nav-susukino.jpg" alt=""
+						/></a>
+					</li>
+					<li>
+						<a href="makomanai.html"
+							><img src="img/Nav-makomanai.jpg" alt=""
+						/></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- ハンバーガーメニュー終了 -->
 
-        <nav class="gnav">
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </nav>
+			<main>
+				<section id="main__contener">
+					<h2>中島公園</h2>
 
-        <!-- <div class="gnavi-btn">
-            <label for="gnavi-btn">
-                <span class="gnavi-btn-line01"></span>
-                <span class="gnavi-btn-line02"></span>
-                <span class="gnavi-btn-line03"></span>
-            </label>
-        </div>   
+					<div class="main__contener__intro">
+						<figure><img src="img/nakajima_heroimg02.jpg" alt="" /></figure>
+						<p class="main__txt">
+							札幌駅から地下鉄南北線で３駅、とアクセス抜群の「中島公園」。<br />市内随一の歓楽街すすきのに隣接しながらも、平和でのどかな空気が流れています。<br />鴨々川、菖蒲池といった水辺、樹齢数百年にもなる木々といった四季折々の穏やかな変化を遂げる自然の公園であると同時に、音楽ホール・天文台・文学館などの文化施設も充実。重要文化財の「八窓庵」や「豊平館」を擁し、歴史の流れを感じられる風情も大きな魅力です。「日本の都市公園100選」や「日本の歴史公園100選」にも選ばれ、札幌のみならず北海道を代表する公園の1つとなっています。
+						</p>
+					</div>
 
+					<ul class="nakajima__innernav">
+						<li>
+							<a href="#concept"
+								><i class="far fa-snowflake"></i>
+								<p>ゆきあかり</p></a
+							>
+						</li>
+						<li>
+							<a href="#gallery"
+								><i class="fas fa-file-image"></i>
+								<p>ギャラリー</p></a
+							>
+						</li>
+						<li>
+							<a href="#access"
+								><i class="fas fa-map-marker-alt"></i>
+								<p>アクセス</p></a
+							>
+						</li>
+						<li>
+							<a href="#info"
+								><i class="fas fa-hotel"></i>
+								<p>宿泊情報</p></a
+							>
+						</li>
+						<li>
+							<a href="#contact"
+								><i class="fas fa-paper-plane"></i>
+								<p>お問合せ</p></a
+							>
+						</li>
+					</ul>
 
-        <div class="header-i__inner">  
-            
-            <nav class="gnav-i">
-                <ul>
-                    <li><a href="#">TOP</a></li>
-                    <li><a href="#">大通り</a></li>
-                    <li><a href="#">すすきの</a></li>
-                    <li><a href="#">中島公園</a></li>
-                    <li><a href="#">真駒内</a></li>
-                </ul>
-            </nav>
-            
-        </div> -->
+					<section id="concept" class="main__contents">
+						<h3>ゆきあかりin中島公園</h3>
 
+						<div class="nakajima__row">
+							<dl class="nakajima__colum01">
+								<dt><img src="img/nakajima_img_l01.jpg" alt="" /></dt>
+								<dd>冬の札幌にゆらゆら煌めく優しい灯</dd>
+							</dl>
 
+							<div class="nakajima__colum02">
+								<p>2020年に第14回を迎えた「ゆきあかりin中島公園」。</p>
 
-        <main>
-            <section id="main__contener">
-                <h2>中島公園会場</h2>
+								<p>
+									自然豊かな憩いの場として市民に愛されている「中島公園」で、雪まつり期間中に開催される人気のイベントです。
+								</p>
 
-                <dl class="main__contener__intro">
-                    <dt><img src="img/nakajima_heroimg02.jpg" alt=""></dt>
-                    <dd class="main__txt">札幌の中心部に位置する「中島公園」。札幌随一の歓楽街すすきのに隣接しながらも、平和でのどかな空気が流れています。<br>重要文化財に指定された開拓使の建造物「豊平館」を擁し、「日本の都市公園100選」や「日本の歴史公園100選」に選ばれるなど、札幌のみならず北海道を代表する公園の1つとなっています。</dd>
-                </dl>
+								<p>
+									雪化粧をした園内は、柔らかなキャンドルのあかりに包まれ、幻想的な世界を楽しめます。来場者が紙コップに願い事を書いて、オリジナルのランタンを作れるコーナー（参加無料）もあります。
+								</p>
 
-                <section class="main__contents">
-                    <h3>ゆきあかりin中島公園</h3>
+								<p>
+									2021年は、新型コロナウイルスの感染拡大防止対策として会場展開を見送ることとなりました。オンライン開催となった今年は例年開催の模様を振り返ります。
+								</p>
+								<p>
+									来る2022年、みなさまとお会いできることを楽しみにしています。
+								</p>
+							</div>
+						</div>
+					</section>
 
+					<p class="go__top">
+						<a href="#nakajima"
+							><i class="fas fa-arrow-circle-up"></i> PAGE TOP</a
+						>
+					</p>
 
-                    <div class="nakajima__row">
+					<section id="gallery" class="main__contents">
+						<h3>幻想的な灯りがやさしく彩る</h3>
 
-                        <dl class="nakajima__colum01">
-                            <dt><img src="img/nakajima_img01.jpg" alt=""></dt>
-                            <dd>冬の札幌にゆらゆら煌めく優しい灯</dd>
-                        </dl>
+						<div class="nakajima__row">
+							<dl class="nakajima__colum01">
+								<dt><img src="img/nakajima_img02.jpg" alt="" /></dt>
+								<dd>
+									<h4>第14回開催／令和2年</h4>
+									<p>地元住民による手作りの滑り台</p>
+								</dd>
+							</dl>
 
-                        <div class="nakajima__colum02">
-                            <p>2020年に第14回を迎えた「ゆきあかりin中島公園」。</p>
+							<dl class="nakajima__colum01">
+								<dt><img src="img/nakajima_img03.jpg" alt="" /></dt>
+								<dd>
+									<h4>第13回開催／平成31年</h4>
+									<p>ペットボトルキャンドル</p>
+								</dd>
+							</dl>
 
-                            <p>自然豊かな憩いの場として市民に愛されている「中島公園」で、雪まつり期間中に開催される人気のイベントです。</p>
-                                
-                            <p>雪化粧をした園内は、柔らかなキャンドルのあかりに包まれ、幻想的な世界を楽しめます。来場者が紙コップに願い事を書いて、オリジナルのランタンを作れるコーナー（参加無料）もあります。</p>
+							<dl class="nakajima__colum01">
+								<dt><img src="img/nakajima_img04.jpg" alt="" /></dt>
+								<dd>
+									<h4>第12回開催／平成30年</h4>
+									<p>無数のランタンがどこまでも続く</p>
+								</dd>
+							</dl>
 
-                            <p>2021年は、新型コロナウイルスの感染拡大防止対策として会場展開を見送ることとなりました。</p>
+							<dl class="nakajima__colum01">
+								<dt><img src="img/nakajima_img05.jpg" alt="" /></dt>
+								<dd>
+									<h4>第11回開催／平成29年</h4>
+									<p>9条広場 光のピラミッド</p>
+								</dd>
+							</dl>
 
-                            <p>例年開催の模様を振り返りながら、来る2022年、みなさまとお会いできることを楽しみにしています。</p>
+							<dl class="nakajima__colum01">
+								<dt><img src="img/nakajima_img06.jpg" alt="" /></dt>
+								<dd>
+									<h4>第10回開催／平成28年</h4>
+									<p>ぬくもりのあるスノーキャンドル</p>
+								</dd>
+							</dl>
 
-                        </div>
+							<dl class="nakajima__colum01">
+								<dt><img src="img/nakajima_img07.jpg" alt="" /></dt>
+								<dd>
+									<h4>第9回開催／平成27年</h4>
+									<p>ハート型のアイスキャンドル</p>
+								</dd>
+							</dl>
+						</div>
+						<p class="nakajima__colum03">
+							<a
+								href="https://www.sapporo.travel/sightseeing.photolibrary/?s=%E5%86%AC&catnum%5B%5D=13&catnum%5B%5D=14&season%5B%5D=34&area%5B%5D=6"
+								target="blank"
+								><i class="fas fa-camera"></i> 中島公園の冬の風景をもっと見る</a
+							>
+						</p>
+					</section>
 
-                    </div>
-                </section>
+					<p class="go__top">
+						<a href="#nakajima"
+							><i class="fas fa-arrow-circle-up"></i> PAGE TOP</a
+						>
+					</p>
 
+					<section id="access" class="main__contents">
+						<h3>会場へのアクセス</h3>
 
+						<div class="nakajima__row">
+							<table class="nakajima__access02">
+								<tr>
+									<th>住所</th>
+								</tr>
+								<tr>
+									<td>〒064-0931 札幌市中央区中島公園1</td>
+								</tr>
+								<tr>
+									<th>交通機関</th>
+								</tr>
+								<tr>
+									<td>
+										地下鉄南北線『中島公園駅』<br />
+										地下鉄南北線『幌平橋駅』<br />
+										市電『中島公園通』『行啓通』
+										<tr>
+											<th>TEL／FAX</th>
+										</tr>
+										<tr>
+											<td>(011)511-3924／(011)511-0437</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="img/nakajima_access_img01.png" alt="" />
+											</td>
+										</tr>
+									</td>
+								</tr>
+							</table>
 
-                <section class="main__contents">
-                    <h3>キャンドルの幻想的な灯りが彩る</h3>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5831.705857459954!2d141.34970177585984!3d43.04452581658724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x5f0b2a23be780609%3A0x3ab2ac5a26715d24!2z44CSMDY0LTA5MzEg5YyX5rW36YGT5pyt5bmM5biC5Lit5aSu5Yy65Lit5bO25YWs5ZyS77yRIOS4reWztuWFrOWckg!3m2!1d43.044488799999996!2d141.3544147!5e0!3m2!1sja!2sjp!4v1610078603122!5m2!1sja!2sjp"
+								width="600"
+								height="450"
+								frameborder="0"
+								style="border: 0"
+								allowfullscreen=""
+								aria-hidden="false"
+								tabindex="0"
+								class="nakajima__access01"
+							></iframe>
+						</div>
+					</section>
 
-                    <div class="nakajima__row">
+					<p class="go__top">
+						<a href="#nakajima"
+							><i class="fas fa-arrow-circle-up"></i> PAGE TOP</a
+						>
+					</p>
 
-                        <dl class="nakajima__colum01">
-                            <dt><img src="img/nakajima_img02.jpg" alt=""></dt>
-                            <dd><h4>第14回開催／令和2年</h4><p>あいうえおかきくけこ</p></dd>
-                        </dl>
+					<section id="info" class="main__contents">
+						<h3>周辺の宿泊施設</h3>
 
-                        <dl class="nakajima__colum01">
-                            <dt><img src="img/nakajima_img03.jpg" alt=""></dt>
-                            <dd><h4>第13回開催／平成31年</h4><p>あいうえおかきくけこ</p></dd>
-                        </dl>
+						<div class="nakajima__grid">
+							<div class="nakajima__grid__item">
+								<a href="http://www.park1964.com/" target="black"
+									>札幌パークホテル</a
+								>
+							</div>
+							<div class="nakajima__grid__item">
+								<a href="http://www.northcity.or.jp/" target="black"
+									>ホテルノースシティ</a
+								>
+							</div>
+							<div class="nakajima__grid__item">
+								<a href="https://www.resol-sapporo-n.com/" target="black"
+									>ホテルリソル札幌中島公園</a
+								>
+							</div>
+							<div class="nakajima__grid__item">
+								<a href="https://quintessahotels.com/sapporo/" target="black"
+									>クインテッサホテル札幌</a
+								>
+							</div>
+							<div class="nakajima__grid__item">
+								<a href="https://www.hotel-unwind.com/" target="black"
+									>UNWIND HOTEL</a
+								>
+							</div>
+							<div class="nakajima__grid__item">
+								<a
+									href="https://www.vessel-hotel.jp/inn/sapporo/"
+									target="black"
+									>ベッセルイン札幌 中島公園</a
+								>
+							</div>
+						</div>
 
-                        <dl class="nakajima__colum01">
-                            <dt><img src="img/nakajima_img04.jpg" alt=""></dt>
-                            <dd><h4>第12回開催／平成30年</h4><p>あいうえおかきくけこ</p></dd>
-                        </dl>
-        
-                        <dl class="nakajima__colum01">
-                            <dt><img src="img/nakajima_img05.jpg" alt=""></dt>
-                            <dd><h4>第11回開催／平成29年</h4><p>あいうえおかきくけこ</p></dd>
-                        </dl>
-    
-                        <dl class="nakajima__colum01">
-                            <dt><img src="img/nakajima_img06.jpg" alt=""></dt>
-                            <dd><h4>第10回開催／平成28年</h4><p>あいうえおかきくけこ</p></dd>
-                        </dl>
+						<p class="nakajima__colum03">
+							<a
+								href="https://yado.knt.co.jp/areamap/1010105300011/"
+								target="blank"
+								><i class="fas fa-hotel"></i> ホテル一覧から探す</a
+							>
+						</p>
+					</section>
 
-                        <dl class="nakajima__colum01">
-                            <dt><img src="img/nakajima_img07.jpg" alt=""></dt>
-                            <dd><h4>第9回開催／平成27年</h4></dd>
-                        </dl>
+					<p class="go__top">
+						<a href="#nakajima"
+							><i class="fas fa-arrow-circle-up"></i> PAGE TOP</a
+						>
+					</p>
 
-                    </div>
-                </section>
+					<section id="contact" class="main__contents">
+						<h3>お問い合わせ</h3>
 
-                <section class="main__contents">
-                    <h3>キャンドルの幻想的な灯りがやさしく彩る</h3>
+						<form action="" method="POST">
+							<dl>
+								<dt>お問い合わせ種別</dt>
+								<dd>
+									<label for="setsuzo"
+										><input
+											type="radio"
+											name="contact"
+											value="setsuzo"
+											class="shubetsu"
+											id="setsuzo"
+										/>
+										市民雪像製作申し込み</label
+									>
+									<label for="voluntee"
+										><input
+											type="radio"
+											name="contact"
+											value="voluntee"
+											class="shubetsu"
+											id="voluntee"
+										/>
+										雪まつりボランティア申し込み</label
+									>
+									<label for="question"
+										><input
+											type="radio"
+											name="contact"
+											value="question"
+											class="shubetsu"
+											id="question"
+										/>
+										お問い合わせ</label
+									>
+								</dd>
 
-                    <div class="nakajima__row">
+								<dt>メールアドレス<span class="required">（必須）</span></dt>
+								<dd><input type="email" name="email" class="email" /></dd>
 
+								<dt>お問い合わせ内容</dt>
+								<dd>
+									<textarea
+										name="message"
+										class="message"
+										id=""
+										cols="50"
+										rows="10"
+										maxlength="500"
+										placeholder="500文字以内でご記入ください"
+									></textarea>
+								</dd>
+							</dl>
 
+							<button type="submit" class="btn">
+								送信する <i class="far fa-paper-plane"></i>
+							</button>
+						</form>
+					</section>
 
+					<p class="go__top">
+						<a href="#nakajima"
+							><i class="fas fa-arrow-circle-up"></i> PAGE TOP</a
+						>
+					</p>
+				</section>
+			</main>
 
+			<footer>
+				<nav class="footer__nav">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="odori.html">大通り</a></li>
+						<li><a href="nakajima.html">中島公園</a></li>
+						<li><a href="susukono.html">すすきの</a></li>
+						<li><a href="makomanai.html">真駒内</a></li>
+					</ul>
+				</nav>
+				<img src="img/footer.png" alt="" />
+			</footer>
+		</div>
+		<!-- wrapper end -->
 
-                </div>
-                </section>
-
-
-
-            </section>
-
-        </main>
-
-        <footer>
-
-        </footer>
-
-    </div>    
-</body>
+		<script src="js\script.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script>
+			jQuery(function () {
+				jQuery('a[href^="#"]').click(function () {
+					let speed = 400;
+					let href = jQuery(this).attr("href");
+					let target = jQuery(href == "#" || href == "" ? "html" : href);
+					let position = target.offset().top;
+					jQuery("body,html").animate({ scrollTop: position }, speed, "swing");
+					return false;
+				});
+			});
+		</script>
+	</body>
 </html>
